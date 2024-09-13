@@ -21,4 +21,5 @@ textarea {
   padding: 8px;
   box-sizing: border-box;
   resize: both;
+  font-size: 18px;
 }
