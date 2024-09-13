@@ -1,18 +1,18 @@
 function handleSubmit() {
-    // Get values from the form
-    var q1 = document.getElementById('question1').value;
-    var q2 = document.getElementById('question2').value;
-    var q3 = document.getElementById('question3').value;
-    var q4 = document.getElementById('question4').value;
-    var q5 = document.getElementById('question5').value;
-    var q6 = document.getElementById('question6').value;
-    var q7 = document.getElementById('question7').value;
-    var q8 = document.getElementById('question8').value;
-    var q9 = document.getElementById('question9').value;
+        // Get values from the form
+        var q1 = document.getElementById('question1').value;
+        var q2 = document.getElementById('question2').value;
+        var q3 = document.getElementById('question3').value;
+        var q4 = document.getElementById('question4').value;
+        var q5 = document.getElementById('question5').value;
+        var q6 = document.getElementById('question6').value;
+        var q7 = document.getElementById('question7').value;
+        var q8 = document.getElementById('question88').value;
+        var q9 = document.getElementById('question9').value;
 
-    // Generate the results section
-    var resultsDiv = document.getElementById('results');
-    resultsDiv.innerHTML = `
+        // Generate the results section
+        var resultsDiv = document.getElementById('results');
+        resultsDiv.innerHTML = `
         <h2>Ready to escalate - copy everything below here and paste it into your ticket escalation</h2>
        
         <p><strong>Subdomain/DB Name:</strong> ${q1}</p>
@@ -32,6 +32,6 @@ function handleSubmit() {
         
     `;
 
-    // Show the results section
-    resultsDiv.style.display = 'block';
+        // Show the results section
+        resultsDiv.style.display = 'block';
 }
