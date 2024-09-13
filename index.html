@@ -10,71 +10,84 @@
 
 <body>
     <h1>T2 Escalation Form</h1>
-    <form id="myForm">
+    <div class="form-container">
+        <form id="myForm">
 
-        <div>
-            <label for="question1">Subdomain/DB Name:</label><br>
-            <textarea id="question1" name="question1" rows="2" cols="50"></textarea><br><br>
-        </div>
-
-        <div>
-            <label for="question2">Frontline Requester:</label><br>
-            <textarea id="question2" name="question2" rows="2" cols="50"></textarea><br><br>
-        </div>
-
-        <div>
-            <label for="question3">Area of product affected (Ex. Events, Donation Form, Reports):</label><br>
-            <textarea id="question3" name="question3" rows="2" cols="50"></textarea><br><br>
-        </div>
-
-        <div>
-            <label for="question4">Brief Summary of the issue (Ex. Scheduled report email not sending to
-                recipients):</label><br>
+            <!-- <div>
+            <label for="question4">Brief Summary of the issue
+                <span class="tooltip-icon" title="Ex. Scheduled report email not sending to recipients">&#10067;</span>:
+            </label><br>
             <textarea id="question4" name="question4" rows="4" cols="50"></textarea><br><br>
-        </div>
+        </div> -->
 
-        <div>
-            <label for="question5">Expected Behavior (Ex. When a report email is scheduled, it will send to the
-                recipients on the schedule assigned):</label><br>
-            <textarea id="question5" name="question5" rows="4" cols="50"></textarea><br><br>
-        </div>
 
-        <div>
-            <label for="question6">Actual Behavior (Ex. While the email did send for x amount of weeks, it hasn’t sent
-                since x date):</label><br>
-            <textarea id="question6" name="question6" rows="4" cols="50"></textarea><br><br>
-        </div>
 
-        <div>
-            <label for="question7">Breakdown of any troubleshooting you did (Ex. tested the report schedule to my own
-                email, searched SendGrid for the email affected, etc):</label><br>
-            <textarea id="question7" name="question7" rows="4" cols="50"></textarea><br><br>
-        </div>
 
-        <!-- <div>
+            <div>
+                <label for="question1">Subdomain/DB Name:</label><br>
+                <textarea id="question1" name="question1" rows="2" cols="50"></textarea><br><br>
+            </div>
+
+            <div>
+                <label for="question2">Frontline Requester:</label><br>
+                <textarea id="question2" name="question2" rows="2" cols="50"></textarea><br><br>
+            </div>
+
+            <div>
+                <label for="question3">Area of product affected <span class="tooltip-icon"
+                        title="Ex. Events, Donation Form, Reports">&#10067;</span>:</label><br>
+                <textarea id="question3" name="question3" rows="2" cols="50"></textarea><br><br>
+            </div>
+
+            <div>
+                <label for="question4">Brief Summary of the issue <span class="tooltip-icon" title="Ex. Scheduled report email not sending to
+                recipients">&#10067;</span>:</label><br>
+                <textarea id="question4" name="question4" rows="4" cols="50"></textarea><br><br>
+            </div>
+
+            <div>
+                <label for="question5">Expected Behavior <span class="tooltip-icon" title="Ex. When a report email is scheduled, it will send to the
+                recipients on the schedule assigned">&#10067;</span>:</label><br>
+                <textarea id="question5" name="question5" rows="4" cols="50"></textarea><br><br>
+            </div>
+
+            <div>
+                <label for="question6">Actual Behavior <span class="tooltip-icon" title="Ex. While the email did send for x amount of weeks, it hasn’t sent
+                since x date">&#10067;</span>:</label><br>
+                <textarea id="question6" name="question6" rows="4" cols="50"></textarea><br><br>
+            </div>
+
+            <div>
+                <label for="question7">Breakdown of any troubleshooting you did <span class="tooltip-icon" title="(Ex. tested the report schedule to my own
+                email, searched SendGrid for the email affected, etc) ">&#10067;</span>:</label><br>
+                <textarea id="question7" name="question7" rows="4" cols="50"></textarea><br><br>
+            </div>
+
+            <!-- <div>
             <label for="question8">Can you reproduce the issue? (Yes/No):</label><br>
             <textarea id="question8" name="question8" rows="2" cols="50"></textarea><br><br>
         </div> -->
 
-        <div>
-            <label for="question8">Can you reproduce the issue? (Yes/No):</label><br>
-            <select id="question8" name="question8">
-                <option value="" disabled selected>Select an option</option>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
-            </select><br><br>
-        </div>
+            <div>
+                <label for="question8">Can you reproduce the issue? (Yes/No):</label><br>
+                <select id="question88" name="question8">
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select><br><br>
+            </div>
 
-        <div>
-            <label for="question9">Any other relevant details? (Links to report/template, screenshots, or screen
-                recordings of the error, etc.):</label><br>
-            <textarea id="question9" name="question9" rows="4"></textarea><br><br>
-        </div>
+            <div>
+                <label for="question9">Any other relevant details? <span class="tooltip-icon" title="Links to report/template, screenshots, or screen
+                recordings of the error, etc.">&#10067;</span>:</label><br>
+                <textarea id="question9" name="question9" rows="4"></textarea><br><br>
+            </div>
 
-        <button type="button" onclick="handleSubmit()">Submit</button>
-    </form>
+            <button type="button" onclick="handleSubmit()">Submit</button>
+        </form>
 
-    <div id="results" class="results" style="display:none;"></div>
+        <div id="results" class="results" style="display:none;"></div>
+    </div>
 
     <script src="index.js"></script>
 </body>
