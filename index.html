@@ -9,15 +9,19 @@
 </head>
 
 <body>
-    <h1>T2 Escalation Form</h1>
-    <div class="form-container">
+    <!-- <header> <button id="toggleButton">Escalation Form toggle</button>
+    </header> -->
+
+    <div id="form-container" class="form-container">
+        <h1>T2 Escalation Form</h1>
         <form id="myForm">
+            <button id="toggleButton">VMS Escalation Form</button>
 
             <!-- <div>
             <label for="question4">Brief Summary of the issue
                 <span class="tooltip-icon" title="Ex. Scheduled report email not sending to recipients">&#10067;</span>:
             </label><br>
-            <textarea id="question4" name="question4" rows="4" cols="50"></textarea><br><br>
+            <textarea id="question4" name="question4" rows="2" cols="50"></textarea><br><br>
         </div> -->
 
 
@@ -42,25 +46,25 @@
             <div>
                 <label for="question4">Brief Summary of the issue <span class="tooltip-icon" title="Ex. Scheduled report email not sending to
                 recipients">&#10067;</span>:</label><br>
-                <textarea id="question4" name="question4" rows="4" cols="50"></textarea><br><br>
+                <textarea id="question4" name="question4" rows="2" cols="50"></textarea><br><br>
             </div>
 
             <div>
                 <label for="question5">Expected Behavior <span class="tooltip-icon" title="Ex. When a report email is scheduled, it will send to the
                 recipients on the schedule assigned">&#10067;</span>:</label><br>
-                <textarea id="question5" name="question5" rows="4" cols="50"></textarea><br><br>
+                <textarea id="question5" name="question5" rows="2" cols="50"></textarea><br><br>
             </div>
 
             <div>
                 <label for="question6">Actual Behavior <span class="tooltip-icon" title="Ex. While the email did send for x amount of weeks, it hasn’t sent
                 since x date">&#10067;</span>:</label><br>
-                <textarea id="question6" name="question6" rows="4" cols="50"></textarea><br><br>
+                <textarea id="question6" name="question6" rows="2" cols="50"></textarea><br><br>
             </div>
 
             <div>
                 <label for="question7">Breakdown of any troubleshooting you did <span class="tooltip-icon" title="(Ex. tested the report schedule to my own
                 email, searched SendGrid for the email affected, etc) ">&#10067;</span>:</label><br>
-                <textarea id="question7" name="question7" rows="4" cols="50"></textarea><br><br>
+                <textarea id="question7" name="question7" rows="2" cols="50"></textarea><br><br>
             </div>
 
             <!-- <div>
@@ -80,14 +84,77 @@
             <div>
                 <label for="question9">Any other relevant details? <span class="tooltip-icon" title="Links to report/template, screenshots, or screen
                 recordings of the error, etc.">&#10067;</span>:</label><br>
-                <textarea id="question9" name="question9" rows="4"></textarea><br><br>
+                <textarea id="question9" name="question9" rows="2"></textarea><br><br>
             </div>
 
-            <button type="button" onclick="handleSubmit()">Submit</button>
+            <button type="button" id="submitFormButton" onclick="handleSubmit()">Submit</button>
+            <button type="button" id="clearFormButton" onclick="clearButton()">Clear Values</button>
+
         </form>
 
-        <div id="results" class="results" style="display:none;"></div>
+
     </div>
+
+    <div id="vms-form-container" class="vms-form-container" style="display: none;">
+
+        <h1> VMS Escalation Form </h1>
+        <form id="myForm">
+            <button id="toggleButton">T2 Escalation Form</button>
+
+            <div>
+                <label for="orgID">Org ID number <span class="tooltip-icon"
+                        title="This can be found in LUFA when you search for the Organization">&#10067;</span>:</label><br>
+                <textarea id="orgID" name="orgID" rows="2" cols="50"></textarea><br><br>
+            </div>
+
+            <div>
+                <label for="oppID">Opportunity ID number <span class="tooltip-icon"
+                        title="If a bug is happening in a specific issue, you will want to pull the ID number for the opportunity. You can find it in LUFA">&#10067;</span>:</label><br>
+                <textarea id="oppID" name="oppID" rows="2" cols="50"></textarea><br><br>
+            </div>
+
+            <div>
+                <label for="userImpact">User impacted and Role:</label><br>
+                <textarea id="userImpact" name="userImpact" rows="2" cols="50"></textarea><br><br>
+            </div>
+
+            <div>
+                <label for="issueDesc">Description of the issue:</label><br>
+                <textarea id="issueDesc" name="issueDesc" rows="2" cols="50"></textarea><br><br>
+            </div>
+
+            <div>
+                <label for="issueLocation">Location of Issue <span class="tooltip-icon"
+                        title="Webapp, Mobile app - type of phone etc">&#10067;</span>:</label><br>
+                <textarea id="issueLocation" name="issueLocation" rows="2" cols="50"></textarea><br><br>
+            </div>
+
+            <div>
+                <label for="troubleshooting">Breakdown of any troubleshooting you did:</label><br>
+                <textarea id="troubleshooting" name="troubleshooting" rows="2" cols="50"></textarea><br><br>
+            </div>
+
+            <div>
+                <label for="reproduceIssue">Can you reproduce the issue? (Yes/No):</label><br>
+                <select id="reproduceIssue" name="reproduceIssue">
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select><br><br>
+            </div>
+
+            <div>
+                <label for="yourName">Your Name:</label><br>
+                <textarea id="yourName" name="yourName" rows="2" cols="50"></textarea><br><br>
+            </div>
+
+            <button type="button" id="submitFormButton" onclick="handleSubmit()">Submit</button>
+            <button type="button" id="clearFormButton" onclick="clearButton()"> Clear Values</button>
+        </form>
+
+    </div>
+    <div id="results" class="results" style="display:none;"></div>
+
 
     <script src="index.js"></script>
 </body>
