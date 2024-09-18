@@ -90,11 +90,20 @@ function handleSubmit() {
         resultsDiv.style.display = 'block';
 }
 
-// fuction that will handle the clear button actions
+
+// Updated clearButton function
 function clearButton() {
-        var clearForm = document.getElementById('myForm');
+        // Checks to see if the form is currently visable or not and assigns True or False 
+        var isT2FormVisible = document.getElementById('form-container').style.display !== 'none';
 
-        // calling the reset() method for the form to set all values to default
-        clearForm.reset();
-};
+        // if True it will reset the T2 form 
+        if (isT2FormVisible) {
+                // Clears the T2 Escalation form
+                document.getElementById('t2Form').reset();
 
+                // if False it will reset the VMS form
+        } else {
+                // Clears the VMS Escalation form
+                document.getElementById('vmsForm').reset();
+        }
+}

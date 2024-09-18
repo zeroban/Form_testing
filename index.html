@@ -9,24 +9,10 @@
 </head>
 
 <body>
-    <!-- <header> <button id="toggleButton">Escalation Form toggle</button>
-    </header> -->
-
     <div id="form-container" class="form-container">
         <h1>T2 Escalation Form</h1>
-        <form id="myForm">
+        <form id="t2Form">
             <button id="toggleButton">VMS Escalation Form</button>
-
-            <!-- <div>
-            <label for="question4">Brief Summary of the issue
-                <span class="tooltip-icon" title="Ex. Scheduled report email not sending to recipients">&#10067;</span>:
-            </label><br>
-            <textarea id="question4" name="question4" rows="2" cols="50"></textarea><br><br>
-        </div> -->
-
-
-
-
             <div>
                 <label for="question1">Subdomain/DB Name:</label><br>
                 <textarea id="question1" name="question1" rows="2" cols="50"></textarea><br><br>
@@ -66,12 +52,6 @@
                 email, searched SendGrid for the email affected, etc) ">&#10067;</span>:</label><br>
                 <textarea id="question7" name="question7" rows="2" cols="50"></textarea><br><br>
             </div>
-
-            <!-- <div>
-            <label for="question8">Can you reproduce the issue? (Yes/No):</label><br>
-            <textarea id="question8" name="question8" rows="2" cols="50"></textarea><br><br>
-        </div> -->
-
             <div>
                 <label for="question8">Can you reproduce the issue? (Yes/No):</label><br>
                 <select id="question88" name="question8">
@@ -98,7 +78,7 @@
     <div id="vms-form-container" class="vms-form-container" style="display: none;">
 
         <h1> VMS Escalation Form </h1>
-        <form id="myForm">
+        <form id="vmsForm">
             <button id="toggleButton">T2 Escalation Form</button>
 
             <div>
@@ -149,7 +129,7 @@
             </div>
 
             <button type="button" id="submitFormButton" onclick="handleSubmit()">Submit</button>
-            <button type="button" id="clearFormButton" onclick="clearButton()"> Clear Values</button>
+            <button type="button" id="clearFormButton" onclick="clearButton()">Clear Values</button>
         </form>
 
     </div>
